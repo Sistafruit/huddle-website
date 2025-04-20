@@ -433,85 +433,79 @@ button {
 button:hover {
     background-color: #e65c00;
 }
-@media (max-width: 600px) {
-    .name-container {
-        flex-direction: column;
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    /* Toggle Button */
+    .menu-toggle {
+      display: block;
+      margin-top: 10px;
     }
-    .name-container input {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Header & Navigation */
-    .header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
+  
+    /* Navigation */
     .navbar {
-        position: relative;
-        left: 0;
-        transform: none;
-        width: 100%;
-        margin-top: 20px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      left: 0;
+      transform: none;
+      margin-top: 20px;
     }
-
+  
+    .navbar.active {
+      display: flex;
+    }
+  
     .nav-list {
-        flex-direction: column;
-        gap: 10px;
+      flex-direction: column;
+      gap: 15px;
     }
-
-    /* Cover Section */
+  
+    /* Header */
+    .header {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    /* Hero Text */
     .cover h1 {
-        font-size: 2.5rem;
-        padding-top: 4rem;
+      font-size: 2.5rem;
+      padding-top: 4rem;
     }
-
+  
     .cover p {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-
-    /* About & Relax Sections */
+  
+    /* About + Gallery */
     .about-content,
     .relax-container {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
-
+  
     .about-illustration img,
     .relax-image img {
-        max-width: 100%;
-        margin: 0 auto;
+      max-width: 100%;
+      margin: 0 auto;
     }
-
+  
     /* Contact Grid */
     .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-
+  
     .section {
-        text-align: center;
+      text-align: center;
     }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        max-width: 140px;
-        margin-left: 0;
-    }
-
-    .cover h1 {
-        font-size: 2rem;
-    }
-
-    .cover p {
-        font-size: 1rem;
-    }
-
-    .menu-btn {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-}
+  }
+  
