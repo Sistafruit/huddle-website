@@ -7,93 +7,104 @@
     <link rel="stylesheet" href="CSS/huddle.css">
 </head>
 <body>
-    <!-- Locatino-info heading -->
+    <!-- Location Info -->
     <div class="location-info">
         <p>261 Morrin Road, Saint Johns, Auckland 1072 | (09) 600 6529</p>
     </div>
+
     <!-- Header Section -->
     <header class="header">
-        <!-- Logo -->
         <div class="logo-container">
             <a href="huddle.html">
-                <img src="Huddle logo o.png" alt="Huddle Cafe Logo" class="logo">
+                <img src="IMG/Huddle logo o.png" alt="Huddle Cafe Logo" class="logo">
             </a>
         </div>
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <ul class="nav-list">
-        <li><a href="huddle.html">Home</a></li>
-        <li class="dropdown">
-            <a href="#menus" class="nav-link">Menus</a>
-            <ul class="dropdown-content">
-                <li><a href="Summer.pdf" target="_blank">Main</a></li>
-                <li><a href="Kids.pdf" target="_blank">Kids</a></li>
+
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        <nav class="navbar" id="navbar">
+            <ul class="nav-list">
+                <li><a href="huddle.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#menus" class="nav-link">Menus</a>
+                    <ul class="dropdown-content">
+                        <li><a href="IMG/Summer.pdf" target="_blank">Main</a></li>
+                        <li><a href="IMG/Kids.pdf" target="_blank">Kids</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#function" class="nav-link">Functions</a>
+                    <ul class="dropdown-content">
+                        <li><a href="IMG/Catering.pdf" target="_blank">Catering Menu</a></li>
+                        <li><a href="IMG/Function Room Details.pdf" target="_blank">Function Room Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="function.html">Contact Us</a></li>
             </ul>
-        </li>
-        <!-- <li><a href="#location">Hours & Location</a></li> -->
-        <div>
-        <li class="dropdown">
-          <a href="#function" class="nav-link">Functions</a>
-          <ul class="dropdown-content">
-            <li><a href="Catering.pdf" target="_blank">Catering Menu</a></li>
-            <li><a href="Function Room Details.pdf" target="_blank">Function Room Details</a></li>
-          </div>
-        <li><a href="function.html">Contact Us</a></li> 
-    </ul>
-</nav>
-        
+        </nav>
     </header>
 
-<section class="contact-cover">
- <div class="contact-photo">
-  <img src="01/grape.JPG" alt="contact photo">
- </div>
-</section>
-
-  <div class="form-container">
-    <form action="https://formsubmit.co/1b1045e670d07268c75a7e7d7ee2c986" method="post">
-      <p class="optional">Contact Form</p>  
-      <label class="required">Name</label>
-        <div class="name-container">
-            <input type="text" name="first-name" placeholder="First Name" required>
-            <input type="text" name="last-name" placeholder="Last Name" required>
+    <!-- Cover Image -->
+    <section class="contact-cover">
+        <div class="contact-photo">
+            <img src="IMG/01/grape.JPG" alt="Contact Photo">
         </div>
+    </section>
 
-        <label class="required">Email</label>
-        <input type="email" name="email" placeholder="Email" required>
-        
-        <label>Phone</label>
-        <input type="tel" name="phone" placeholder="Phone">
+    <!-- Contact Form -->
+    <div class="form-container">
+        <form action="https://formsubmit.co/1b1045e670d07268c75a7e7d7ee2c986" method="post">
+            <p class="optional">Contact Form</p>  
 
-        <label class="required">Message</label>
-        <input type="text" name="message" placeholder="General inquiry or additional details" required>
-        
-        <p class="optional">Booking details (optional)</p>
-        
-        <label>Preferred Date</label>
-        <input type="date" name="preferred-date">
-        
-        <label>Preferred Time</label>
-        <input type="time" name="preferred-time">
-        
-        <label>Duration</label>
-        <input type="text" name="duration" placeholder="e.g., 2 hours">
-        
-        <label>Number of People</label>
-        <input type="text" name="people" placeholder="Include details like prams, kids, etc.">
-        
-        <div class="checkbox-container">
-            <input type="checkbox" name="function-room" value="yes">
-            <label>Request function room</label>
-        </div>
-        
-        <div class="checkbox-container">
-            <input type="checkbox" name="function-room-requirements" value="yes">
-            <label>I understand the function room requirements</label>
-        </div>
-        
-        <button type="submit">Submit</button>
-    </form>
-</div>
+            <label class="required">Name</label>
+            <div class="name-container">
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+            </div>
+
+            <label class="required">Email</label>
+            <input type="email" name="email" placeholder="Email" required>
+
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="Phone">
+
+            <label class="required">Message</label>
+            <input type="text" name="message" placeholder="General inquiry or additional details" required>
+
+            <p class="optional">Booking details (optional)</p>
+
+            <label>Preferred Date</label>
+            <input type="date" name="preferred-date">
+
+            <label>Preferred Time</label>
+            <input type="time" name="preferred-time">
+
+            <label>Duration</label>
+            <input type="text" name="duration" placeholder="e.g., 2 hours">
+
+            <label>Number of People</label>
+            <input type="text" name="people" placeholder="Include details like prams, kids, etc.">
+
+            <div class="checkbox-container">
+                <input type="checkbox" name="function-room" value="yes">
+                <label>Request function room</label>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" name="function-room-requirements" value="yes">
+                <label>I understand the function room requirements</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar");
+        toggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

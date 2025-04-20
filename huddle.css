@@ -50,14 +50,14 @@ body {
 
 /* Logo */
 .logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .logo {
-  max-width: 60%;
+    max-width: 180px;
+    margin-left: 20px;
+    height: auto;
+    display: block;
 }
 
 /* Navigation Bar */
@@ -324,19 +324,19 @@ body {
 }
 
 /* Gallery Section */
-
- .gallery {
-     display: flex;
-     justify-content: center;
-     padding-top: 50px;
-     padding-left: 20px;
- }
- .gallery img {
-     width: 300px;
-     height: 300px;
-     object-fit: cover;
-     margin: 20px;
- }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  
+  .gallery img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }  
 /* Contact Us Photo */
 
 .contact-photo {
@@ -381,10 +381,12 @@ input {
 .name-container {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-}
-.name-container input {
-    width: 50%;
-}
+    gap: 15px; /* 💫 adds space between first & last name */
+  }
+  
+  .name-container input {
+    width: 100%;
+  }
 
 .required::after {
     content: " *";
@@ -441,6 +443,14 @@ button:hover {
     cursor: pointer;
   }
   
+  body, html {
+    overflow-x: hidden;
+}
+@media (max-width: 600px) {
+    .gallery img {
+        width: 100%;
+    }
+}
   @media (max-width: 768px) {
     /* Toggle Button */
     .menu-toggle {
@@ -507,5 +517,46 @@ button:hover {
     .section {
       text-align: center;
     }
-  }
+    .gallery {
+        justify-content: center;
+        padding: 20px;
+      }
+    
+      .gallery img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+      }
+      .form-container {
+        padding: 20px;
+        margin: 20px auto; /* center horizontally */
+        width: 90%;
+        max-width: 500px;  /* optional limit for large phones/tablets */
+      }
+    
+      input,
+      select,
+      textarea {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+    
+      .name-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+      .name-container input {
+        width: 100%;
+      }
+    
+      button {
+        padding: 10px;
+        font-size: 15px;
+      }
+    
+      .optional {
+        font-size: 1.2rem;
+      }
+    }
   
