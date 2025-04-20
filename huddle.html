@@ -1,58 +1,60 @@
-s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huddle Cafe</title>
-    <link rel="stylesheet" href="CSS/huddle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Huddle Cafe</title>
+  <link rel="stylesheet" href="huddle.css" />
 </head>
 <body>
-    <!-- Locatino-info heading -->
-    <div class="location-info">
-        <p>261 Morrin Road, Saint Johns, Auckland 1072 | (09) 600 6529</p>
+
+  <div class="location-info">
+    <p>261 Morrin Road, Saint Johns, Auckland 1072 | (09) 600 6529</p>
+  </div>
+
+  <header class="header">
+    <div class="logo-container">
+      <a href="huddle.html">
+        <img src="Huddle logo o.png" alt="Huddle Cafe Logo" class="logo"/>
+      </a>
     </div>
-    <!-- Header Section -->
-    <header class="header">
-        <!-- Logo -->
-        <div class="logo-container">
-            <a href="huddle.html">
-                <img src="Huddle logo o.png" alt="Huddle Cafe Logo" class="logo">
-            </a>
-        </div>
-<!-- Navigation Bar -->
-<nav class="navbar">
-    <ul class="nav-list">
+
+    <!-- Hamburger Toggle -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav class="navbar" id="navbar">
+      <ul class="nav-list">
         <li><a href="huddle.html">Home</a></li>
         <li class="dropdown">
-            <a href="#menus" class="nav-link">Menus</a>
-            <ul class="dropdown-content">
-                <li><a href="Summer.pdf" target="_blank">Main</a></li>
-                <li><a href="Kids.pdf" target="_blank">Kids</a></li>
-            </ul>
+          <a href="#menus" class="nav-link">Menus</a>
+          <ul class="dropdown-content">
+            <li><a href="Summer.pdf" target="_blank">Main</a></li>
+            <li><a href="Kids.pdf" target="_blank">Kids</a></li>
+          </ul>
         </li>
-        <!-- <li><a href="#location">Hours & Location</a></li> -->
-        <div>
         <li class="dropdown">
           <a href="#function" class="nav-link">Functions</a>
           <ul class="dropdown-content">
             <li><a href="Catering.pdf" target="_blank">Catering Menu</a></li>
             <li><a href="Function Room Details.pdf" target="_blank">Function Room Details</a></li>
-          </div>
-        <li><a href="function.html">Contact Us</a></li> 
-    </ul>
-</nav>
-        
-    </header>
-          <!-- First photo section -->
-<section class="cover">
-  <div class="background-overlay">
-    <img src="DSC03034.JPG" alt="Huddle Cafe Background">
-    <div class="cover-tint"></div>
-  </div>
-  <h1>Huddle Cafe</h1>
-  <p>The best of Saint Johns.</p>
-  <a href="#shop" class="menu-btn">Seasonal Menu</a>
-</section>
+          </ul>
+        </li>
+        <li><a href="function.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="cover">
+    <div class="background-overlay">
+      <img src="DSC03034.JPG" alt="Huddle Cafe Background" />
+      <div class="cover-tint"></div>
+    </div>
+    <h1>Huddle Cafe</h1>
+    <p>The best of Saint Johns.</p>
+    <a href="#shop" class="menu-btn">Seasonal Menu</a>
+  </section>
+
 
 <section class="location-hours-contact" id="location">
 <div class="contact-grid">
@@ -123,5 +125,13 @@ s<!DOCTYPE html>
     </div>
   </section>
 
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+    toggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
+  
 </body>
 </html>
