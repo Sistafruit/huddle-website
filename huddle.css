@@ -456,6 +456,12 @@ button:hover {
     .menu-toggle {
       display: block;
       margin-top: 10px;
+      background-color: var(--huddle-orange);
+      color: white;
+      border-radius: 10px;
+      border: none;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
   
     /* Navigation */
