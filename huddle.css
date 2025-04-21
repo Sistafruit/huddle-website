@@ -480,11 +480,27 @@ button:hover {
       display: flex;
     }
   
-    .nav-list {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
+  .nav-list {
+    flex-direction: column;
+    align-items: center; /* center the links */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 10px 20px;
+    display: block;
+  }
     /* Header */
     .header {
       flex-direction: column;
