@@ -30,6 +30,7 @@ body {
 .location-info {
     font-size: 14px;
     color: var(--huddle-green);
+    background-color: #f9f9f9;
     padding: 1rem 0;
     margin: 0;
     text-align: center;
