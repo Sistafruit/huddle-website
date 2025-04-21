@@ -446,10 +446,64 @@ button:hover {
     border: none;
     cursor: pointer;
   }
+  .footer {
+    background-color: #f9f9f9;
+    color: black;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+    opacity: 0.95;
+  }
+  
+  .footer p.socials {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer .social-link img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: none;
+  }
+  
+  .footer .social-link img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer .copyright {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 10px;
+  }
   
   body, html {
     overflow-x: hidden;
 }
+
 @media (max-width: 600px) {
     .gallery img {
         width: 100%;
